@@ -1,12 +1,12 @@
 import Title from "./components/Title";
+import IsOpened from "./components/IsOpened";
 
 function App() {
-
-  return <div>
-  <Title name="Products" type="bold" />
-  <Title name="Employees" type="normal" />
-  </div>
-
+  return (
+    <>
+      <IsOpened />
+    </>
+  )
 }
 
 export default App;
