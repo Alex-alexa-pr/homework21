@@ -1,12 +1,23 @@
+import { useState } from "react";
+
 import Title from "./components/Title";
-import IsOpened from "./components/IsOpened";
 
 function App() {
-  return (
-    <>
-      <IsOpened />
-    </>
-  )
+  const [isOpened, setOpened] = useState(false);
+
+  function handleClick() {
+      setOpened(true);
+    };
+
+  if (!isOpened) {
+      return <button onClick={handleClick}>Open title</button>
+    }
+    return (
+      <>
+          <Title name="Products" type="bold" />
+          <Title name="Employees" type="normal" />
+      </>
+    )
 }
 
 export default App;

@@ -7,8 +7,8 @@ function Title ({name, type}) {
 }
 
 Title.propTypes = {
-    name: PropTypes.string,
-    type: PropTypes.oneOf(["bold", "normal"]),
+    name: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(["bold", "normal"]).isRequired,
   };
 
 export default Title;
